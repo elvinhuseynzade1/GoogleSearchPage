@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: arial,sans-serif;
+        }
+        header {    
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background: #f1f1f1;
+            padding: 15px 20px 10px 20px;
+        }
+        .top_logo img{
+            height: 33px;
+            width: 92px;
+        }
+        .top_right a:link {
+            text-decoration: none;
+            margin: 5px;
+        }
+        .top_right a:hover {
+            border-bottom: 1px solid gray;
+        }
+
+        .top_right a:active {
+            color: gray;
+        }
+        .title {
+            margin: 25px 35px;
+            color: #d93025;
+            font-size: 20px;
+        }
+        .labels {
+            width: 60%;
+            margin: 40px 20px;
+            position: relative;
+        }
+        .labels span{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .labels span input {
+            min-width: 60%;
+            padding: 8px 12px;
+        }
+        .bottom_left {
+            position: absolute;
+            right: 16px;
+        }
+        .bottom_left input{
+            height: 30px;
+            min-width: 120px;
+            background-color: #4d90fe;
+            border: 1px solid #3079ed;
+            color: #fff;
+        }
+        .descrpt {
+            width: 40%;
+            margin: 40px 20px;
+        }
+        .descrpt span{
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+        .hrzntl {
+            min-width: 600px;
+            display: flex;
+            flex-direction: row;
+        }
+        @media (max-width: 960px) { 
+            .descrpt {
+                display: none;
+            }
+            .labels {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top_logo">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="">
+        </div>
+        <div class="top_right">
+          <a href="/index.html">Go back to Google Search</a>      
+        </div>
+    </header>
+    <div class="title">
+        <label>Advanced Search</label>
+    </div>
+    <div class="line" style="border-bottom: 1px solid #ebebeb;"></div>
+    <form action="https://google.com/search" class="hrzntl">
+        <div class="labels">
+            <h4>Find pages with...</h5></br></br>
+            <span><label for="atw">all these words: </label><input type="text" id="atw" name="as_q" autocomplete="off"></span></br>
+            <span><label for="tewop">this exact word or phrase: </label><input type="text" id="tewop" name="as_epq"></span></br>
+            <span><label for="aotw">any of these words: </label><input type="text" id="aotw" name="as_oq"></span></br>
+            <span><label for="notw">none of these words: </label><input type="text" id="notw" name="as_eq"></span></br>
+            <div class="bottom_left">
+                <input type="submit" value="Advanced Search"> 
+            </div>
+        </div>
+        <div class="descrpt">
+            <h4>To do this in the search box.</h4></br></br>
+            <span>Type the important words: tri-colour rat terrier</span></br>
+            <span>Put exact words in quotes: "rat terrier"</span></br>
+            <span>Type OR between all the words you want: miniature OR standard</span></br>
+            <span>Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</span></br>
+        </div>
+    </form>
+</body>
+</html>
